@@ -40995,6 +40995,49 @@
     "description": "",
     "lang": "zh-CN"
   },
+  "efe": {
+    "routes": {
+      "/:category?": {
+        "path": "/:category?",
+        "name": "Category",
+        "maintainers": [
+          "mlkgrnt"
+        ],
+        "example": "/efe/mundo",
+        "parameters": {
+          "category": {
+            "description": "Category slug, see table below. Defaults to mundo.",
+            "default": "mundo"
+          }
+        },
+        "categories": [
+          "new-media"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "efe.com/:category"
+            ],
+            "target": "/:category"
+          }
+        ],
+        "location": "index.ts",
+        "module": "() => import('@/routes/efe/index.ts')"
+      }
+    },
+    "apiRoutes": {},
+    "name": "EFE Noticias",
+    "url": "efe.com",
+    "lang": "es"
+  },
   "egsea": {
     "routes": {
       "/flash": {
@@ -56713,6 +56756,56 @@
     "name": "Grub Street",
     "url": "grubstreet.com",
     "lang": "en"
+  },
+  "grupoanimal": {
+    "routes": {
+      "/estados": {
+        "name": "Estados",
+        "maintainers": [
+          "Slayer015"
+        ],
+        "path": "/estados",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/grupoanimal/estados",
+        "radar": [
+          {
+            "source": [
+              "www.grupoanimal.mx/estados"
+            ],
+            "target": "/grupoanimal/estados"
+          }
+        ],
+        "location": "estados.ts",
+        "module": "() => import('@/routes/grupoanimal/estados.ts')"
+      },
+      "/politica": {
+        "name": "Política",
+        "maintainers": [
+          "Slayer015"
+        ],
+        "path": "/politica",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/grupoanimal/politica",
+        "radar": [
+          {
+            "source": [
+              "www.grupoanimal.mx/politica"
+            ],
+            "target": "/grupoanimal/politica"
+          }
+        ],
+        "location": "politica.ts",
+        "module": "() => import('@/routes/grupoanimal/politica.ts')"
+      }
+    },
+    "apiRoutes": {},
+    "name": "Grupo Animal",
+    "url": "grupoanimal.mx",
+    "lang": "es-mx"
   },
   "gs": {
     "routes": {
@@ -75573,6 +75666,88 @@
     "url": "join-lemmy.org",
     "lang": "en"
   },
+  "lemonde": {
+    "routes": {
+      "/en/:category?": {
+        "path": "/en/:category?",
+        "categories": [
+          "traditional-media"
+        ],
+        "example": "/lemonde/en",
+        "view": 0,
+        "parameters": {
+          "category": {
+            "description": "Category slug, see table below. Defaults to homepage.",
+            "default": ""
+          }
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "lemonde.fr/en/:category"
+            ],
+            "target": "/en/:category"
+          }
+        ],
+        "name": "News (English)",
+        "maintainers": [
+          "mlkgrnt"
+        ],
+        "description": "| Category                | Description               |\n| ----------------------- | ------------------------- |\n| (empty)                 | Homepage / Top stories    |\n| international           | World – International     |\n| americas                | World – Americas          |\n| united-kingdom          | World – United Kingdom    |\n| united-states           | World – United States     |\n| africa                  | World – Africa            |\n| asia-pacific            | World – Asia Pacific      |\n| middle-east             | World – Middle East       |\n| europe                  | Europe                    |\n| politics                | France – French Politics  |\n| police-and-justice      | France – French Justice   |\n| education               | France – French Education |\n| french-delights         | France – French Delights  |\n| environment             | Environment               |\n| economy                 | Economy                   |\n| world-economy           | Economy – World Economy   |\n| french-economy          | Economy – French Economy  |\n| m-le-mag                | M Magazine                |\n| lifestyle               | M Magazine – Lifestyle    |\n| fashion                 | M Magazine – Fashion      |\n| food                    | M Magazine – Food         |\n| travel                  | M Magazine – Travel       |\n| culture                 | Culture                   |\n| arts                    | Culture – Art             |\n| cinema                  | Culture – Cinema          |\n| music                   | Culture – Music           |\n| books                   | Culture – Books           |\n| global-issues           | Global Issues             |\n| pixels                  | Pixels                    |\n| artificial-intelligence | Pixels – AI               |\n| social-media            | Pixels – Social Media     |\n| sports                  | Sports                    |\n| football                | Sports – Football         |\n| rugby                   | Sports – Rugby            |\n| tennis                  | Sports – Tennis           |\n| cycling                 | Sports – Cycling          |\n| basketball              | Sports – Basketball       |\n| science                 | Science                   |\n| health                  | Health                    |\n| intimacy                | Intimacy                  |\n| les-decodeurs           | Les Décodeurs             |\n| our-times               | Our Times                 |\n| obituaries              | Obituaries                |\n| religion                | Religion                  |\n| opinion                 | Opinion                   |\n| editorials              | Opinion – Editorials      |\n| columns                 | Opinion – Columns         |\n| op-eds                  | Opinion – Op-Eds          |",
+        "location": "en.ts",
+        "module": "() => import('@/routes/lemonde/en.ts')"
+      },
+      "/:category?": {
+        "path": "/:category?",
+        "categories": [
+          "traditional-media"
+        ],
+        "example": "/lemonde",
+        "view": 0,
+        "parameters": {
+          "category": {
+            "description": "Category slug, see table below. Defaults to homepage.",
+            "default": ""
+          }
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "lemonde.fr/:category"
+            ],
+            "target": "/:category"
+          }
+        ],
+        "name": "News",
+        "maintainers": [
+          "mlkgrnt"
+        ],
+        "description": "| Category      | Description            |\n| ------------- | ---------------------- |\n| (empty)       | Homepage / Top stories |\n| international | International          |\n| politique     | Politics               |\n| economie      | Economy                |\n| societe       | Society                |\n| culture       | Culture                |\n| sport         | Sports                 |\n| planete       | Environment            |\n| pixels        | Tech / Digital         |\n| sciences      | Sciences               |\n| idees         | Opinions               |\n| sante         | Health                 |\n| em            | M le mag               |\n| en-continu    | Live / Breaking        |\n| decodeurs     | Fact-checking          |",
+        "location": "index.ts",
+        "module": "() => import('@/routes/lemonde/index.ts')"
+      }
+    },
+    "apiRoutes": {},
+    "name": "Le Monde",
+    "url": "lemonde.fr",
+    "lang": "fr"
+  },
   "lenovo": {
     "routes": {
       "/drive/:selName": {
@@ -85890,6 +86065,75 @@
     "name": "Nautiljon",
     "url": "nautiljon.com",
     "lang": "fr"
+  },
+  "naver": {
+    "routes": {
+      "/search/:category/:keyword": {
+        "path": "/search/:category/:keyword",
+        "categories": [
+          "other"
+        ],
+        "example": "/naver/search/all/송소희",
+        "parameters": {
+          "category": {
+            "description": "검색 카테고리. 기본값: all (통합검색)",
+            "default": "all",
+            "options": [
+              {
+                "value": "all",
+                "label": "통합검색"
+              },
+              {
+                "value": "blog",
+                "label": "블로그"
+              },
+              {
+                "value": "cafe",
+                "label": "카페"
+              },
+              {
+                "value": "news",
+                "label": "뉴스"
+              },
+              {
+                "value": "video",
+                "label": "동영상"
+              }
+            ]
+          },
+          "keyword": "검색 키워드"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "m.search.naver.com/search.naver"
+            ],
+            "target": "/search/:category/:keyword"
+          }
+        ],
+        "name": "검색",
+        "maintainers": [
+          "slowmande"
+        ],
+        "location": "search.ts",
+        "module": "() => import('@/routes/naver/search.ts')"
+      }
+    },
+    "apiRoutes": {},
+    "name": "네이버",
+    "url": "naver.com",
+    "lang": "ko",
+    "zh": {
+      "name": "Naver"
+    }
   },
   "nbd": {
     "routes": {
@@ -98278,7 +98522,7 @@
         },
         "features": {
           "requireConfig": false,
-          "requirePuppeteer": false,
+          "requirePuppeteer": true,
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
@@ -98287,18 +98531,18 @@
         "radar": [
           {
             "source": [
-              "www.pixnoy.com/profile/:id"
+              "www.picnob.com/profile/:id"
             ],
             "target": "/user/:id"
           },
           {
             "source": [
-              "www.pixnoy.com/profile/:id/tagged"
+              "www.picnob.com/profile/:id/tagged"
             ],
             "target": "/user/:id/tagged"
           }
         ],
-        "name": "User Profile - Pixnoy",
+        "name": "User Profile - Picnob",
         "maintainers": [
           "TonyRL",
           "micheal-death",
@@ -98334,23 +98578,19 @@
               {
                 "label": "Posts",
                 "value": "posts"
-              },
-              {
-                "label": "Stories",
-                "value": "stories"
               }
             ]
           }
         },
         "features": {
           "requireConfig": false,
-          "requirePuppeteer": false,
+          "requirePuppeteer": true,
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
           "supportScihub": false
         },
-        "name": "User Profile - Picnob",
+        "name": "User Profile - Picnob.info",
         "maintainers": [
           "TonyRL"
         ],
@@ -111093,18 +111333,7 @@
         ],
         "example": "/sjtu/cs/tzgg/bkspy",
         "parameters": {
-          "category": {
-            "description": "通知类别",
-            "options": {
-              "bkspy": "本科生培养",
-              "yjspy": "研究生培养",
-              "gjjl": "国际交流",
-              "djdy": "党建德育",
-              "txgz": "团学工作",
-              "zyfz": "职业发展",
-              "qt": "其他"
-            }
-          }
+          "category": "通知类别"
         },
         "features": {
           "requireConfig": false,
@@ -111163,6 +111392,7 @@
           "BeaCox"
         ],
         "url": "www.cs.sjtu.edu.cn/notice-xssw-bkspy.html",
+        "description": "| 本科生培养 | 研究生培养 | 国际交流 | 党建德育 | 团学工作 | 职业发展 | 其他 |\n| ---------- | ---------- | -------- | -------- | -------- | -------- | ---- |\n| bkspy      | yjspy      | gjjl     | djdy     | txgz     | zyfz     | qt   |",
         "location": "cs/tzgg.tsx",
         "module": "() => import('@/routes/sjtu/cs/tzgg.tsx')"
       },
@@ -113258,6 +113488,42 @@
     "name": "南方网",
     "url": "nfapp.southcn.com",
     "lang": "zh-CN"
+  },
+  "soweather": {
+    "routes": {
+      "/warn": {
+        "path": "/warn",
+        "name": "Shanghai Weather Alert",
+        "url": "wx.soweather.com/wxapp/warn.jsp",
+        "maintainers": [
+          "TinkoLiu"
+        ],
+        "example": "/soweather/warn",
+        "categories": [
+          "forecast"
+        ],
+        "zh": {
+          "name": "上海天气预警",
+          "example": "/soweather/warn",
+          "path": "/warn",
+          "maintainers": [
+            "TinkoLiu"
+          ]
+        },
+        "location": "warn.ts",
+        "module": "() => import('@/routes/soweather/warn.ts')"
+      }
+    },
+    "apiRoutes": {},
+    "name": "SoWeather",
+    "url": "wx.soweather.com",
+    "categories": [
+      "forecast"
+    ],
+    "lang": "zh-CN",
+    "zh": {
+      "name": "上海天气预警"
+    }
   },
   "spankbang": {
     "routes": {
